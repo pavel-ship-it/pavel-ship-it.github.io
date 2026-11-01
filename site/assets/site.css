@@ -65,7 +65,7 @@ kbd,.ui{font-family:inherit;font-weight:650;background:var(--gold-50);border:1px
 .helpbar{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:16px 20px;margin:26px 0 0;display:flex;gap:10px 22px;flex-wrap:wrap;align-items:center;position:relative;z-index:3}
 .helpbar strong{color:#141a2b}
 .hero .helpbar{color:var(--ink)}
-.section{padding:10px 0 20px}
+.section{padding-top:10px;padding-bottom:20px}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;padding:0;list-style:none}
 @media(min-width:900px){.cards{grid-template-columns:repeat(3,1fr)}}
 .card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 18px 14px;margin:0}
@@ -171,3 +171,5 @@ th{background:var(--gold-50)}
 .hero-icons a:first-child{transform:rotate(-7deg) translateY(10px);margin-right:-18px;z-index:1}
 .hero-icons a:last-child{transform:rotate(6deg) translateY(-14px);z-index:2}
 @media (max-width:860px){.hero-icons{display:none}}
+.doc .contact h2{border-top:0;padding-top:0;margin-top:.1em}
+.section > h2:first-child{margin-top:1.4em}
