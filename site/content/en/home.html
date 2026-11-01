@@ -1,0 +1,32 @@
+{% from 'macros.html' import app_card %}
+<section class="hero dev">
+  <div class="wrap hero-grid">
+  <div>
+    <p class="eyebrow">Indie developer</p>
+    <h1>Pavel Yakimenko</h1>
+    <p class="lead">I make small, focused apps: <strong>Fridge Pick</strong> for quick meal ideas and <strong>Jewelers Handbook</strong> for jewelers. Both work offline and collect no personal data.</p>
+    <div class="btns">
+      <a class="btn primary" href="#apps">See the apps</a>
+      <a class="btn" href="{{ rel('/support') }}">Get support</a>
+    </div>
+  </div>
+  <div class="hero-icons" aria-hidden="true">{% for a in apps %}<a href="{{ a.url }}" tabindex="-1"><img src="{{ rel('/assets/img/' ~ a.icon ~ '-512.jpg') }}" width="168" height="168" alt=""></a>{% endfor %}</div>
+  </div>
+</section>
+
+<section class="wrap section" id="apps" aria-labelledby="apps-h">
+  <h2 id="apps-h">Apps</h2>
+  <ul class="apps">
+    {%- for a in apps %}
+    {{ app_card(a, t, {'site': 'App website', 'manual': 'User manual', 'privacy': 'Privacy Policy'}) }}
+    {%- endfor %}
+  </ul>
+</section>
+
+<section class="wrap section">
+  <div class="contact" aria-labelledby="help-h">
+    <h2 id="help-h">Need help with an app?</h2>
+    <p>There is one support channel for all my apps. Write to <a class="mailto" href="mailto:{{ email }}">{{ email }}</a> or open the <a href="{{ rel('/support') }}">support page</a>. I reply to every message as soon as I can.</p>
+    <p class="mail-btns">{% for a in apps %}<a class="btn{% if not loop.first %} ghost{% endif %}" href="{{ a.mailto }}"><img src="{{ rel('/assets/img/' ~ a.icon ~ '-192.webp') }}" alt="" width="24" height="24"> Email about {{ a.short_l }}</a>{% endfor %}</p>
+  </div>
+</section>

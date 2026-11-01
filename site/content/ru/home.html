@@ -1,0 +1,32 @@
+{% from 'macros.html' import app_card %}
+<section class="hero dev">
+  <div class="wrap hero-grid">
+  <div>
+    <p class="eyebrow">Инди-разработчик</p>
+    <h1>Pavel Yakimenko</h1>
+    <p class="lead">Я делаю небольшие приложения под конкретные задачи: <strong>Fridge Pick</strong> — быстрые идеи, что приготовить, и <strong>«Справочник ювелира»</strong> — для ювелиров. Оба работают без интернета и не собирают персональные данные.</p>
+    <div class="btns">
+      <a class="btn primary" href="#apps">Приложения</a>
+      <a class="btn" href="{{ rel('/ru/support') }}">Поддержка</a>
+    </div>
+  </div>
+  <div class="hero-icons" aria-hidden="true">{% for a in apps %}<a href="{{ a.url }}" tabindex="-1"><img src="{{ rel('/assets/img/' ~ a.icon ~ '-512.jpg') }}" width="168" height="168" alt=""></a>{% endfor %}</div>
+  </div>
+</section>
+
+<section class="wrap section" id="apps" aria-labelledby="apps-h">
+  <h2 id="apps-h">Приложения</h2>
+  <ul class="apps">
+    {%- for a in apps %}
+    {{ app_card(a, t, {'site': 'Сайт приложения', 'manual': 'Руководство', 'privacy': 'Конфиденциальность'}) }}
+    {%- endfor %}
+  </ul>
+</section>
+
+<section class="wrap section">
+  <div class="contact" aria-labelledby="help-h">
+    <h2 id="help-h">Нужна помощь с приложением?</h2>
+    <p>У всех моих приложений один канал поддержки. Пишите на <a class="mailto" href="mailto:{{ email }}">{{ email }}</a> или откройте <a href="{{ rel('/ru/support') }}">страницу поддержки</a>. Я отвечаю на каждое письмо, как только могу.</p>
+    <p class="mail-btns">{% for a in apps %}<a class="btn{% if not loop.first %} ghost{% endif %}" href="{{ a.mailto }}"><img src="{{ rel('/assets/img/' ~ a.icon ~ '-192.webp') }}" alt="" width="24" height="24"> Написать о {{ 'Fridge Pick' if a.id == 'fridge-pick' else '«Справочнике ювелира»' }}</a>{% endfor %}</p>
+  </div>
+</section>

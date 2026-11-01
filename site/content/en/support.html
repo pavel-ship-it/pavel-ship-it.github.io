@@ -1,0 +1,42 @@
+<div class="wrap narrow doc">
+<h1>Support</h1>
+<p class="lead">One place for help with all my apps. Questions, problems or ideas? Email me, the developer, or check each app’s manual and FAQ below.</p>
+
+<section class="contact" aria-labelledby="contact-h">
+  <h2 id="contact-h">Contact the developer</h2>
+  <p>Email: <a class="mailto" href="mailto:{{ email }}">{{ email }}</a></p>
+  <p>Choose the app so the subject is filled in for you:</p>
+  <p class="mail-btns">{% for a in apps %}<a class="btn{% if not loop.first %} ghost{% endif %}" href="{{ a.mailto }}"><img src="{{ rel('/assets/img/' ~ a.icon ~ '-192.webp') }}" alt="" width="24" height="24"> {{ a.short_l }} support</a>{% endfor %}</p>
+  <p>I read every message and reply as soon as I can, in English or Russian.</p>
+</section>
+
+<h2 id="include">What to include in your message</h2>
+<ul class="checks">
+  <li><strong>The app</strong>: Fridge Pick or Jewelers Handbook, and the app version if you know it.</li>
+  <li><strong>Your device</strong>: for example iPhone 15 or iPad Air.</li>
+  <li><strong>System version</strong>: iOS or iPadOS (or Android for Fridge Pick), from Settings → General → About.</li>
+  <li><strong>Steps</strong>: what you did, what you expected and what happened instead.</li>
+  <li><strong>A screenshot or screen recording</strong>, if you can. It helps a lot.</li>
+</ul>
+
+<h2 id="apps">Help for each app</h2>
+<ul class="pol">
+{%- for a in apps %}
+  <li class="card"><h3><a href="{{ a.url }}">{{ a.name_l }}</a></h3>
+    <p><a href="{{ a.manual }}">User manual</a> · <a href="{{ a.support }}">App support &amp; FAQ</a> · <a href="{{ a.privacy }}">Privacy Policy</a></p>
+    <p><a class="more" href="{{ a.mailto }}">Email about {{ a.short_l }}</a></p></li>
+{%- endfor %}
+</ul>
+
+<h2 id="faq">Common questions</h2>
+<details class="faq" open><summary>How do I use Fridge Pick?</summary>
+<p>The <a href="{{ apps[0].manual }}">Fridge Pick user manual</a> explains My fridge, filters, I’m hungry, the week plan, the shopping list, allergies and kitchen settings. More answers are on the <a href="{{ apps[0].support }}">Fridge Pick support page</a>.</p></details>
+<details class="faq"><summary>How do I use Jewelers Handbook?</summary>
+<p>The <a href="{{ apps[1].manual }}">Jewelers Handbook user manual</a> covers the chain calculators, actual size and 3D, stones, cuts, settings, clasps, carat, ring size and metal weight. More answers are on the <a href="{{ apps[1].support }}">Jewelers Handbook support page</a>.</p></details>
+<details class="faq"><summary>What data do the apps collect?</summary>
+<p>None. There are no accounts, ads or tracking, and what you enter stays on your device. Details are in each policy: <a href="{{ apps[0].privacy }}">Fridge Pick Privacy Policy</a>, <a href="{{ apps[1].privacy }}">Jewelers Handbook Privacy Policy</a>. All policies are also listed on the <a href="{{ rel('/privacy') }}">Privacy</a> page.</p></details>
+<details class="faq"><summary>Do I need an account or internet?</summary>
+<p>No account is needed for either app, and both work offline. You only need internet to install and update them from the store.</p></details>
+<details class="faq"><summary>How do I report a bug or suggest an idea?</summary>
+<p>Use the buttons above or write to <a href="mailto:{{ email }}">{{ email }}</a>. Please include the details listed in <a href="#include">What to include</a>.</p></details>
+</div>

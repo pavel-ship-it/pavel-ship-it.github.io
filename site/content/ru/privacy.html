@@ -1,0 +1,11 @@
+<div class="wrap narrow doc">
+<h1>Конфиденциальность</h1>
+<p class="lead">У каждого приложения своя политика конфиденциальности. Коротко: мои приложения не собирают персональные данные, в них нет учётных записей, рекламы и отслеживания, а всё, что вы вводите, остаётся на устройстве.</p>
+<ul class="pol">
+{%- for a in apps %}
+  <li class="card"><div class="app-head"><img src="{{ rel('/assets/img/' ~ a.icon ~ '-192.webp') }}" width="48" height="48" alt=""><h3><a href="{{ a.privacy }}">{{ a.name_l }}</a></h3></div>
+    <p><a class="more" href="{{ a.privacy }}">Политика конфиденциальности</a></p></li>
+{%- endfor %}
+</ul>
+<p>Вопросы о конфиденциальности? Пишите на <a href="mailto:{{ email }}">{{ email }}</a> или откройте <a href="{{ rel('/ru/support') }}">«Поддержку»</a>.</p>
+</div>

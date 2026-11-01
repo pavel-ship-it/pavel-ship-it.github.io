@@ -1,0 +1,22 @@
+{% macro badges(a, t, light=False) -%}
+<!-- store links come from site/config.json apps[].stores; empty = not public yet -->
+<div class="store-links">
+{%- if a.stores.app_store %}<a class="store-btn" href="{{ a.stores.app_store }}" rel="noopener"><span class="store-small">{{ t.badge_apple_small }}</span><span class="store-big">App Store</span></a>
+{%- else %}<span class="store-btn soon-badge{% if light %} light{% endif %}" aria-label="{{ t.soon_apple }}"><span class="store-small">{{ t.badge_soon }}</span><span class="store-big">App Store</span></span>{% endif %}
+{%- if 'google_play' in a.stores %}
+{%- if a.stores.google_play %}<a class="store-btn" href="{{ a.stores.google_play }}" rel="noopener"><span class="store-small">{{ t.badge_google_small }}</span><span class="store-big">Google Play</span></a>
+{%- else %}<span class="store-btn soon-badge{% if light %} light{% endif %}" aria-label="{{ t.soon_play }}"><span class="store-small">{{ t.badge_soon }}</span><span class="store-big">Google Play</span></span>{% endif %}
+{%- endif %}
+</div>
+{%- endmacro %}
+{% macro app_card(a, t, labels) -%}
+<li class="app" id="{{ a.id }}">
+  <div class="app-head">
+    <img src="{{ rel('/assets/img/' ~ a.icon ~ '-192.webp') }}" width="72" height="72" alt="" loading="lazy">
+    <div><h3><a href="{{ a.url }}">{{ a.name_l }}</a></h3><p class="platforms">{{ a.platforms_l }}</p></div>
+  </div>
+  <p>{{ a.blurb }}</p>
+  {{ badges(a, t, light=True) }}
+  <p class="links"><a class="dev-link" href="{{ a.url }}">{{ labels.site }}</a> <a href="{{ a.manual }}">{{ labels.manual }}</a> <a href="{{ a.privacy }}">{{ labels.privacy }}</a></p>
+</li>
+{%- endmacro %}

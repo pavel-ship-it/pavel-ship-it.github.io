@@ -1,0 +1,11 @@
+<div class="wrap narrow doc">
+<h1>Privacy</h1>
+<p class="lead">Each app has its own privacy policy. In short: my apps collect no personal data, have no accounts, ads or tracking, and keep what you enter on your device.</p>
+<ul class="pol">
+{%- for a in apps %}
+  <li class="card"><div class="app-head"><img src="{{ rel('/assets/img/' ~ a.icon ~ '-192.webp') }}" width="48" height="48" alt=""><h3><a href="{{ a.privacy }}">{{ a.name_l }}</a></h3></div>
+    <p><a class="more" href="{{ a.privacy }}">Read the {{ a.short_l }} Privacy Policy</a></p></li>
+{%- endfor %}
+</ul>
+<p>Questions about privacy? Email <a href="mailto:{{ email }}">{{ email }}</a> or see <a href="{{ rel('/support') }}">Support</a>.</p>
+</div>
