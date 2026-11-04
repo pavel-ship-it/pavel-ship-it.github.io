@@ -172,7 +172,8 @@ def graph(lang, page):
                'image': img, 'description': a['blurb'],
                'author': {'@id': abs_('/#person')}, 'publisher': {'@id': abs_('/#developer')}}
         if a['name']['ru'] != a['name']['en']:
-            app['alternateName'] = a['name']['ru' if lang == 'en' else 'en']
+            if lang == 'ru':
+                app['alternateName'] = a['name']['en']
         same = [v for v in a['stores'].values() if v]
         if same:
             app['sameAs'] = same
