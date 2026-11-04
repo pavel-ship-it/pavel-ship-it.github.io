@@ -14,6 +14,8 @@ pavel-ship-it.github.io host, so it also lists the two app sitemaps.
 import json, os, re, shutil, hashlib
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from markupsafe import Markup
+import sys as _sys; _sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import langmenu
 from urllib.parse import quote
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -183,6 +185,7 @@ def main():
     env = Environment(loader=FileSystemLoader([os.path.join(HERE, 'templates'), os.path.join(HERE, 'content')]),
                       autoescape=select_autoescape(['html']))
     css = open(os.path.join(HERE, 'assets', 'site.css'), 'rb').read()
+    env.globals.update(lang_menu=lambda cur, alt: Markup(langmenu.html(cur, {l: rel(u) for l, u in alt.items()})), lang_js=Markup(langmenu.JS))
     env.globals.update(rel=rel, abs=abs_, css_version=hashlib.md5(css).hexdigest()[:8], email=CFG['email'],
                        mailto=mailto, base_url=BASE_URL)
 

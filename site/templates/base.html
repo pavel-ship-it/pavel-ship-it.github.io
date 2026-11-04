@@ -52,7 +52,7 @@
       <a href="{{ rel(t.home) }}#apps">{{ t.nav_apps }}</a>
       <a href="{{ rel(t.support) }}"{% if page.kind == 'support' %} aria-current="page"{% endif %}>{{ t.nav_support }}</a>
       <a href="{{ rel(t.privacy) }}"{% if page.kind == 'privacy' %} aria-current="page"{% endif %}>{{ t.nav_privacy }}</a>
-      <a class="lang" href="{{ rel(page.alternates[t.other]) }}" hreflang="{{ t.other }}" lang="{{ t.other }}" data-lang="{{ t.other }}">{{ t.other_label }}</a>
+      {{ lang_menu(lang, page.alternates) }}
     </nav>
   </div>
 </header>
@@ -89,5 +89,6 @@
 <script>
 (function(){try{document.querySelectorAll('[data-lang]').forEach(function(a){a.addEventListener('click',function(){localStorage.setItem('py_lang',a.getAttribute('data-lang'))})})}catch(e){}})();
 </script>
+<script>{{ lang_js }}</script>
 </body>
 </html>
