@@ -46,7 +46,7 @@ T = {
         home='/', support='/support', privacy='/privacy',
         footer_tagline='Indie developer. Apps that work offline and collect no personal data.',
         footer_contact='Questions or ideas?', footer_apps='Apps',
-        og_alt='Pavel Yakimenko, indie developer: Fridge Pick and Jewelers Handbook',
+        og_alt='Pavel Yakimenko, indie developer: Fridge Pick, Jewelers Handbook and Lightwhirl',
         soon_apple='Coming soon to the App Store', soon_play='Coming soon to Google Play',
         badge_soon='Coming soon to the', badge_apple_small='Download on the', badge_google_small='Get it on',
     ),
@@ -57,7 +57,7 @@ T = {
         home='/ru/', support='/ru/support', privacy='/ru/privacy',
         footer_tagline='Инди-разработчик. Приложения работают без интернета и не собирают персональные данные.',
         footer_contact='Вопросы или идеи?', footer_apps='Приложения',
-        og_alt='Pavel Yakimenko, инди-разработчик: Fridge Pick и «Справочник ювелира»',
+        og_alt='Pavel Yakimenko, инди-разработчик: Fridge Pick, «Справочник ювелира» и Lightwhirl',
         soon_apple='Скоро в App Store', soon_play='Скоро в Google Play',
         badge_soon='Скоро в', badge_apple_small='Загрузите в', badge_google_small='Доступно в',
     ),
@@ -67,22 +67,22 @@ URLS = {'home': ('/', '/ru/'), 'support': ('/support', '/ru/support'), 'privacy'
 
 PAGES = {
     'en': {
-        'home': dict(title='Pavel Yakimenko – Indie Developer: Fridge Pick and Jewelers Handbook',
+        'home': dict(title='Pavel Yakimenko – Indie Developer: Fridge Pick, Jewelers Handbook, Lightwhirl',
                      og_title='Pavel Yakimenko – Indie Developer',
-                     description='Apps by Pavel Yakimenko: Fridge Pick, quick meal ideas from what’s in your fridge, and Jewelers Handbook, an offline reference and calculators for jewelers. Support and privacy in one place.'),
+                     description='Apps by Pavel Yakimenko: Fridge Pick, quick meal ideas from what’s in your fridge, and Jewelers Handbook, an offline reference and calculators for jewelers, and Lightwhirl, a music visualizer for Mac. Support and privacy in one place.'),
         'support': dict(title='Support – Apps by Pavel Yakimenko', crumb='Support',
-                        description='Get help with Fridge Pick and Jewelers Handbook: email the developer, report a bug or suggest an idea, and find each app’s manual and privacy policy.'),
+                        description='Get help with Fridge Pick, Jewelers Handbook and Lightwhirl: email the developer, report a bug or suggest an idea, and find each app’s manual and privacy policy.'),
         'privacy': dict(title='Privacy Policies – Apps by Pavel Yakimenko', crumb='Privacy',
-                        description='Privacy policies of Fridge Pick and Jewelers Handbook. Neither app collects personal data, has accounts, ads or tracking.'),
+                        description='Privacy policies of Fridge Pick, Jewelers Handbook and Lightwhirl. None of the apps collects personal data, has accounts, ads or tracking.'),
     },
     'ru': {
-        'home': dict(title='Pavel Yakimenko — инди-разработчик: Fridge Pick и «Справочник ювелира»',
+        'home': dict(title='Pavel Yakimenko — инди-разработчик: Fridge Pick, «Справочник ювелира», Lightwhirl',
                      og_title='Pavel Yakimenko — инди-разработчик',
-                     description='Приложения Pavel Yakimenko: Fridge Pick — быстрые блюда из того, что есть в холодильнике, и «Справочник ювелира» — офлайн-справочник и калькуляторы для ювелира. Поддержка и конфиденциальность в одном месте.'),
+                     description='Приложения Pavel Yakimenko: Fridge Pick — быстрые блюда из того, что есть в холодильнике, и «Справочник ювелира» — офлайн-справочник и калькуляторы для ювелира, и Lightwhirl — музыкальный визуализатор для Mac. Поддержка и конфиденциальность в одном месте.'),
         'support': dict(title='Поддержка – приложения Pavel Yakimenko', crumb='Поддержка',
-                        description='Помощь по Fridge Pick и «Справочнику ювелира»: написать разработчику, сообщить об ошибке или предложить идею, руководства и политики конфиденциальности приложений.'),
+                        description='Помощь по Fridge Pick, «Справочнику ювелира» и Lightwhirl: написать разработчику, сообщить об ошибке или предложить идею, руководства и политики конфиденциальности приложений.'),
         'privacy': dict(title='Политики конфиденциальности – приложения Pavel Yakimenko', crumb='Конфиденциальность',
-                        description='Политики конфиденциальности Fridge Pick и «Справочника ювелира». Приложения не собирают персональные данные, в них нет учётных записей, рекламы и отслеживания.'),
+                        description='Политики конфиденциальности Fridge Pick, «Справочника ювелира» и Lightwhirl. Приложения не собирают персональные данные, в них нет учётных записей, рекламы и отслеживания.'),
     },
 }
 
@@ -93,6 +93,12 @@ APP_TXT = {
                    subject='Fridge Pick support', include_os='iOS or Android version'),
         'ru': dict(blurb='Быстрые блюда из того, что есть в холодильнике. Отметьте продукты и посмотрите, что можно приготовить прямо сейчас, получите идеи, когда хочется есть, спланируйте неделю и ведите список покупок. Без интернета и регистрации. Интерфейс пока на английском.',
                    subject='Fridge Pick: поддержка', include_os='версию iOS или Android'),
+    },
+    'lightwhirl': {
+        'en': dict(blurb='A music visualizer for Mac. Play anything on your Mac and watch it turn into light: eight feedback presets and two photo scenes, Northern Sky and Fireplace, that move with the beat, fullscreen in one key. Nothing leaves your Mac.',
+                   subject='Lightwhirl support', include_os='macOS version'),
+        'ru': dict(blurb='Музыкальный визуализатор для Mac. Включите любую музыку на Mac и смотрите, как она превращается в свет: восемь пресетов с эффектом обратной связи и две фотосцены, «Северное небо» и «Камин», в такт ритму, полный экран одной клавишей. Ничего не покидает ваш Mac.',
+                   subject='Lightwhirl: поддержка', include_os='версию macOS'),
     },
     'jewelers-handbook': {
         'en': dict(blurb='An offline reference and calculator kit for jewelers: chain calculators with 3D models at actual size, gemstones, cuts, settings and clasps, carat estimate, ring sizes and metal weight. No account.',
@@ -132,6 +138,13 @@ def apps_for(lang):
         x['url'] = a['site'] if lang == 'en' else a['site_ru']
         base = x['url']
         x['manual'], x['privacy'], x['support'] = base + 'manual/', base + 'privacy', base + 'support'
+        if 'manual' in a:
+            x['manual'] = a['manual']
+        if isinstance(a.get('privacy'), dict):
+            x['privacy'] = a['privacy'][lang]
+        if isinstance(a.get('support'), dict):
+            x['support'] = a['support'][lang]
+        x['external'] = x['url'].startswith('http')
         x['mailto'] = mailto(x['subject'])
         res.append(x)
     return res
@@ -150,9 +163,11 @@ def graph(lang, page):
             'inLanguage': ['en', 'ru'], 'publisher': {'@id': abs_('/#developer')}}
     apps = []
     for a in apps_for(lang):
-        app = {'@type': 'SoftwareApplication', '@id': BASE_URL + a['site'] + '#app', 'name': a['name_l'],
-               'url': BASE_URL + a['url'], 'operatingSystem': a['os'], 'applicationCategory': a['category'],
-               'image': BASE_URL + a['site'] + 'assets/img/icon-512.jpg', 'description': a['blurb'],
+        pre = '' if a['external'] else BASE_URL
+        img = a['site'] + 'assets/img/icon-512.png' if a['external'] else BASE_URL + a['site'] + 'assets/img/icon-512.jpg'
+        app = {'@type': 'SoftwareApplication', '@id': pre + a['site'] + '#app', 'name': a['name_l'],
+               'url': pre + a['url'], 'operatingSystem': a['os'], 'applicationCategory': a['category'],
+               'image': img, 'description': a['blurb'],
                'author': {'@id': abs_('/#person')}, 'publisher': {'@id': abs_('/#developer')}}
         if a['name']['ru'] != a['name']['en']:
             app['alternateName'] = a['name']['ru' if lang == 'en' else 'en']

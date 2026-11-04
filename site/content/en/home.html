@@ -4,13 +4,13 @@
   <div>
     <p class="eyebrow">Indie developer</p>
     <h1>Pavel Yakimenko</h1>
-    <p class="lead">I make small, focused apps: <strong>Fridge Pick</strong> for quick meal ideas and <strong>Jewelers Handbook</strong> for jewelers. Both work offline and collect no personal data.</p>
+    <p class="lead">I make small, focused apps: <strong>Fridge Pick</strong> for quick meal ideas, <strong>Jewelers Handbook</strong> for jewelers and <strong>Lightwhirl</strong>, a music visualizer for Mac. They work offline and collect no personal data.</p>
     <div class="btns">
       <a class="btn primary" href="#apps">See the apps</a>
       <a class="btn" href="{{ rel('/support') }}">Get support</a>
     </div>
   </div>
-  <div class="hero-icons" aria-hidden="true">{% for a in apps %}<a href="{{ a.url }}" tabindex="-1"><img src="{{ rel('/assets/img/' ~ a.icon ~ '-512.jpg') }}" width="168" height="168" alt=""></a>{% endfor %}</div>
+  <div class="hero-icons" aria-hidden="true">{% for a in apps %}<a href="{{ a.url }}" tabindex="-1"><img src="{{ rel('/assets/img/' ~ a.icon ~ ('-512.png' if a.external else '-512.jpg')) }}" width="168" height="168" alt=""></a>{% endfor %}</div>
   </div>
 </section>
 

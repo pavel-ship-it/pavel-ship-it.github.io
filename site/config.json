@@ -1,32 +1,88 @@
 {
   "base_url": "https://pavel-ship-it.github.io",
   "base_path": "",
-  "lastmod": "2026-11-01",
+  "lastmod": "2026-11-04",
   "email": "dreamcomenull@gmail.com",
   "apps": [
     {
       "id": "fridge-pick",
-      "name": {"en": "Fridge Pick: Quick Meal Ideas", "ru": "Fridge Pick: Quick Meal Ideas"},
-      "short": {"en": "Fridge Pick", "ru": "Fridge Pick"},
+      "name": {
+        "en": "Fridge Pick: Quick Meal Ideas",
+        "ru": "Fridge Pick: Quick Meal Ideas"
+      },
+      "short": {
+        "en": "Fridge Pick",
+        "ru": "Fridge Pick"
+      },
       "site": "/fridge-pick-support/",
       "site_ru": "/fridge-pick-support/ru/",
       "icon": "fridge-pick",
-      "platforms": {"en": "iPhone · iPad · Android", "ru": "iPhone · iPad · Android"},
+      "platforms": {
+        "en": "iPhone · iPad · Android",
+        "ru": "iPhone · iPad · Android"
+      },
       "os": "iOS, iPadOS, Android",
       "category": "LifestyleApplication",
-      "stores": {"app_store": null, "google_play": null}
+      "stores": {
+        "app_store": null,
+        "google_play": null
+      }
     },
     {
       "id": "jewelers-handbook",
-      "name": {"en": "Jewelers Handbook", "ru": "Справочник ювелира"},
-      "short": {"en": "Jewelers Handbook", "ru": "Справочник ювелира"},
+      "name": {
+        "en": "Jewelers Handbook",
+        "ru": "Справочник ювелира"
+      },
+      "short": {
+        "en": "Jewelers Handbook",
+        "ru": "Справочник ювелира"
+      },
       "site": "/jewelers-handbook-support/",
       "site_ru": "/jewelers-handbook-support/ru/",
       "icon": "jewelers-handbook",
-      "platforms": {"en": "iPhone · iPad", "ru": "iPhone · iPad"},
+      "platforms": {
+        "en": "iPhone · iPad",
+        "ru": "iPhone · iPad"
+      },
       "os": "iOS, iPadOS",
       "category": "ReferenceApplication",
-      "stores": {"app_store": null}
+      "stores": {
+        "app_store": null
+      }
+    },
+    {
+      "id": "lightwhirl",
+      "name": {
+        "en": "Lightwhirl",
+        "ru": "Lightwhirl"
+      },
+      "short": {
+        "en": "Lightwhirl",
+        "ru": "Lightwhirl"
+      },
+      "site": "https://lightwhirl.app/",
+      "site_ru": "https://lightwhirl.app/ru/",
+      "icon": "lightwhirl",
+      "privacy": {
+        "en": "https://lightwhirl.app/privacy/",
+        "ru": "https://lightwhirl.app/ru/privacy/"
+      },
+      "support": {
+        "en": "https://lightwhirl.app/support/",
+        "ru": "https://lightwhirl.app/ru/support/"
+      },
+      "manual": null,
+      "store_name": "Mac App Store",
+      "platforms": {
+        "en": "Mac",
+        "ru": "Mac"
+      },
+      "os": "macOS",
+      "category": "MultimediaApplication",
+      "stores": {
+        "app_store": null
+      }
     }
   ],
   "_stores_note": "When an app's store page is live, set its stores.app_store (https://apps.apple.com/app/id<APP_ID>) or stores.google_play and run: python3 site/build.py"
