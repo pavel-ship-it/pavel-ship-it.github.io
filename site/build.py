@@ -97,9 +97,9 @@ APP_TXT = {
                    subject='Fridge Pick: поддержка', include_os='версию iOS или Android'),
     },
     'lightwhirl': {
-        'en': dict(blurb='A music visualizer for Mac, iPhone and Android. Sixteen presets and scenes that move with the beat, and shared rooms so other devices can follow the picture. Used alone, nothing leaves your device.',
+        'en': dict(blurb='A music visualizer for Mac, iPhone and Android. Fourteen presets and scenes that move with the beat, and shared rooms so other devices can follow the picture. Used alone, nothing leaves your device.',
                    subject='Lightwhirl support', include_os='macOS, iOS or Android version'),
-        'ru': dict(blurb='Музыкальный визуализатор для Mac, iPhone и Android. Шестнадцать пресетов и сцен в такт музыке и общие комнаты, чтобы другие устройства повторяли картинку. В одиночном режиме ничего не покидает устройство.',
+        'ru': dict(blurb='Музыкальный визуализатор для Mac, iPhone и Android. Четырнадцать пресетов и сцен в такт музыке и общие комнаты, чтобы другие устройства повторяли картинку. В одиночном режиме ничего не покидает устройство.',
                    subject='Lightwhirl: поддержка', include_os='версию macOS, iOS или Android'),
     },
     'jewelers-handbook': {
