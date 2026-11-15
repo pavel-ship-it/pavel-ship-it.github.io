@@ -1,7 +1,7 @@
 {
   "base_url": "https://pavel-ship-it.github.io",
   "base_path": "",
-  "lastmod": "2026-11-04",
+  "lastmod": "2026-11-15",
   "email": "dreamcomenull@gmail.com",
   "apps": [
     {
@@ -75,13 +75,14 @@
       "manual": null,
       "store_name": "Mac App Store",
       "platforms": {
-        "en": "Mac",
-        "ru": "Mac"
+        "en": "Mac · iPhone · Android",
+        "ru": "Mac · iPhone · Android"
       },
-      "os": "macOS",
+      "os": "macOS, iOS, Android",
       "category": "MultimediaApplication",
       "stores": {
-        "app_store": null
+        "app_store": null,
+        "google_play": null
       }
     }
   ],
