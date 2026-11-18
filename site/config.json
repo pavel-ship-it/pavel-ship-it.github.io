@@ -1,7 +1,7 @@
 {
   "base_url": "https://pavel-ship-it.github.io",
   "base_path": "",
-  "lastmod": "2026-11-04",
+  "lastmod": "2026-11-18",
   "email": "dreamcomenull@gmail.com",
   "apps": [
     {
@@ -24,7 +24,7 @@
       "os": "iOS, iPadOS, Android",
       "category": "LifestyleApplication",
       "stores": {
-        "app_store": null,
+        "app_store": "https://apps.apple.com/app/id6828103127",
         "google_play": null
       }
     },
