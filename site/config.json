@@ -6,21 +6,11 @@
   "apps": [
     {
       "id": "fridge-pick",
-      "name": {
-        "en": "Fridge Pick: Quick Meal Ideas",
-        "ru": "Fridge Pick: Quick Meal Ideas"
-      },
-      "short": {
-        "en": "Fridge Pick",
-        "ru": "Fridge Pick"
-      },
+      "name": "Fridge Pick: Quick Meal Ideas",
+      "short": "Fridge Pick",
       "site": "/fridge-pick-support/",
-      "site_ru": "/fridge-pick-support/ru/",
       "icon": "fridge-pick",
-      "platforms": {
-        "en": "iPhone · iPad · Android",
-        "ru": "iPhone · iPad · Android"
-      },
+      "platforms": "iPhone · iPad · Android",
       "os": "iOS, iPadOS, Android",
       "category": "LifestyleApplication",
       "stores": {
@@ -30,21 +20,11 @@
     },
     {
       "id": "jewelers-handbook",
-      "name": {
-        "en": "Jewelers Handbook",
-        "ru": "Справочник ювелира"
-      },
-      "short": {
-        "en": "Jewelers Handbook",
-        "ru": "Справочник ювелира"
-      },
+      "name": "Jewelers Handbook",
+      "short": "Jewelers Handbook",
       "site": "/jewelers-handbook-support/",
-      "site_ru": "/jewelers-handbook-support/ru/",
       "icon": "jewelers-handbook",
-      "platforms": {
-        "en": "iPhone · iPad",
-        "ru": "iPhone · iPad"
-      },
+      "platforms": "iPhone · iPad",
       "os": "iOS, iPadOS",
       "category": "ReferenceApplication",
       "stores": {
@@ -53,31 +33,15 @@
     },
     {
       "id": "lightwhirl",
-      "name": {
-        "en": "Lightwhirl",
-        "ru": "Lightwhirl"
-      },
-      "short": {
-        "en": "Lightwhirl",
-        "ru": "Lightwhirl"
-      },
+      "name": "Lightwhirl",
+      "short": "Lightwhirl",
       "site": "https://lightwhirl.app/",
-      "site_ru": "https://lightwhirl.app/ru/",
       "icon": "lightwhirl",
-      "privacy": {
-        "en": "https://lightwhirl.app/privacy/",
-        "ru": "https://lightwhirl.app/ru/privacy/"
-      },
-      "support": {
-        "en": "https://lightwhirl.app/support/",
-        "ru": "https://lightwhirl.app/ru/support/"
-      },
+      "privacy": "https://lightwhirl.app/privacy/",
+      "support": "https://lightwhirl.app/support/",
       "manual": null,
       "store_name": "Mac App Store",
-      "platforms": {
-        "en": "Mac",
-        "ru": "Mac"
-      },
+      "platforms": "Mac",
       "os": "macOS",
       "category": "MultimediaApplication",
       "stores": {
