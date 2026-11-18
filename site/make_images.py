@@ -33,9 +33,8 @@ flat(mark(180), NIGHT).save(os.path.join(HERE, 'apple-touch-icon.png'))
 mark(64).save(os.path.join(HERE, 'favicon.png'))
 mark(48).save(os.path.join(HERE, 'favicon.ico'), sizes=[(16, 16), (32, 32), (48, 48)])
 
-TXT = {'en': ('Pavel Yakimenko', 'Indie developer of mobile apps', ['Fridge Pick', 'Jewelers Handbook']),
-       'ru': ('Pavel Yakimenko', 'Инди-разработчик мобильных приложений', ['Fridge Pick', 'Справочник ювелира'])}
-for lang, (name, sub, apps) in TXT.items():
+name, sub, apps = ('Pavel Yakimenko', 'Indie developer of mobile apps', ['Fridge Pick', 'Jewelers Handbook'])
+for lang in ('en',):
     W, H = 1200, 630
     im = Image.new('RGB', (W, H), NIGHT)
     glow = Image.new('RGB', (W, H), NIGHT); g = ImageDraw.Draw(glow)
